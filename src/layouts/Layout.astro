@@ -1,0 +1,77 @@
+---
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+  </head>
+  <body class="relative">
+    <slot />
+    <!-- Button to scroll up -->
+    <!-- Button to scroll up -->
+    <div class="fixed hidden right-10 bottom-24" id="scrollUpButtonContainer">
+      <a href="#upToLogo" id="scrollUpButtonLink">
+        <img
+          src="./scrollup.svg"
+          alt="Icon Scroll"
+          class="w-[50px] p-2 bg-black rounded-full shadow-xl"
+        />
+      </a>
+    </div>
+
+    <script>
+      // Obtén los elementos del contenedor y el enlace del botón de scroll
+      const scrollUpButtonContainer = document.getElementById(
+        "scrollUpButtonContainer"
+      );
+      const scrollUpButtonLink = document.getElementById("scrollUpButtonLink");
+
+      // Agrega un evento de desplazamiento (scroll) al objeto global 'window'
+      window.addEventListener("scroll", () => {
+        // Verifica si la posición vertical del desplazamiento es mayor a 0
+        if (window.pageYOffset > 0) {
+          // Si es mayor a 0, muestra el contenedor del botón
+          scrollUpButtonContainer.style.display = "block";
+        } else {
+          // Si es 0, oculta el contenedor del botón
+          scrollUpButtonContainer.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --accent: 124, 58, 237;
+    --accent-gradient: linear-gradient(
+      45deg,
+      rgb(var(--accent)),
+      #da62c4 30%,
+      white 60%
+    );
+  }
+  html {
+    font-family: system-ui, sans-serif;
+    background-color: #f6f6f6;
+    scroll-behavior: smooth;
+  }
+  code {
+    font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+      DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+  }
+</style>

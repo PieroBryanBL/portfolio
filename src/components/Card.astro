@@ -1,0 +1,56 @@
+---
+interface Props {
+  title: String;
+  description: String;
+  titleFirstButton: string;
+  titleSecondButton: string;
+  source: string;
+  alternateText: string;
+}
+
+const {
+  title,
+  description,
+  titleFirstButton,
+  titleSecondButton,
+  source,
+  alternateText,
+} = Astro.props;
+---
+
+<div class="flex flex-col gap-5 rounded-md bg-white p-5 shadow-sm">
+  <!-- Carta -->
+  <div class="flex flex-col flex-wrap gap-4">
+    <img src={source} alt={alternateText} class="rounded-md shadow-md" />
+    <h3 class="font-bold text-2xl">{title}</h3>
+    <p>{description}</p>
+  </div>
+
+  <div class="flex flex-wrap gap-2">
+    <a
+      href="#_"
+      class="rounded-md px-3.5 py-2 m-1 overflow-hidden relative group cursor-pointer border-2 font-medium border-black text-black"
+    >
+      <span
+        class="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-black top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"
+      ></span>
+      <span
+        class="relative text-black transition duration-300 group-hover:text-white ease"
+        >{titleSecondButton}</span
+      >
+    </a>
+
+    <a
+      href="#_"
+      class="rounded-md px-3.5 py-2 m-1 overflow-hidden relative group cursor-pointer border-2 font-medium border-black text-black"
+    >
+      <span
+        class="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-black top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"
+      ></span>
+      <span
+        class="relative text-black transition duration-300 group-hover:text-white ease"
+        >{titleSecondButton}</span
+      >
+    </a>
+  </div>
+</div>

@@ -1,0 +1,184 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+---
+
+<Layout title="Xeroh | Portafolio">
+  <header
+    class="flex justify-between items-center max-w-5xl w-11/12 mx-auto py-5"
+    id="upToLogo"
+  >
+    <div class="w-32">
+      <a href="#"
+        ><img
+          src="./logo-black.webp"
+          alt="Logo Xeroh"
+          class="w-full object-cover"
+        /></a
+      >
+    </div>
+
+    <nav>
+      <ul class="flex gap-2">
+        <li class="font-bold"><a href="#">Inicio</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="max-w-5xl w-11/12 mx-auto grid place-content-center">
+    <!-- Hero -->
+    <div class="flex flex-col gap-7 my-20">
+      <div class="text-center">
+        <h1 class="font-bold text-4xl">Hola, mi nombre es Piero Bryan</h1>
+        <p class="italic my-1">
+          Soy un desarrollador Front-End al que le encanta la tecnología y los
+          juegos con amigos. Me divierto creando cosas en la web y disfruto
+          pasar tiempo con mis conocidos en sesiones de juego. ¡La tecnología y
+          los videojuegos son mi pasión!
+        </p>
+      </div>
+      <div class="flex gap-2 justify-center">
+        <a
+          href="#aboutme"
+          class="relative px-5 py-3 overflow-hidden font-medium text-gray-600 bg-gray-100 border-[1px] border-black rounded shadow-inner group"
+        >
+          <span
+            class="absolute top-0 left-0 w-0 h-0 transition-all duration-200 border-t-2 border-gray-600 group-hover:w-full ease"
+          ></span>
+          <span
+            class="absolute bottom-0 right-0 w-0 h-0 transition-all duration-200 border-b-2 border-gray-600 group-hover:w-full ease"
+          ></span>
+          <span
+            class="absolute top-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-gray-600 group-hover:h-full ease"
+          ></span>
+          <span
+            class="absolute bottom-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-gray-600 group-hover:h-full ease"
+          ></span>
+          <span
+            class="absolute inset-0 w-full h-full duration-300 delay-300 bg-gray-900 opacity-0 group-hover:opacity-100"
+          ></span>
+          <span
+            class="relative transition-colors duration-300 delay-200 group-hover:text-white ease"
+            >Sobre mi</span
+          >
+        </a>
+      </div>
+    </div>
+    <!-- Fin de Hero -->
+
+    <!-- Proyectos -->
+    <div class="flex flex-col justify-center items-center">
+      <h2 class="font-bold text-3xl my-10">Mejores Proyectos</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        <Card
+          title={"Instrument"}
+          description={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio molestias repellat consectetur, eius ut modi minus ea praesentium porro error"}
+          source={"./Project-02.png"}
+          titleFirstButton="Ver Github"
+          titleSecondButton="Ver en vivo"
+          alternateText="Instrument Web Clone"
+        />
+
+        <Card
+          title={"Elegant Portfolio"}
+          description={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio molestias repellat consectetur, eius ut modi minus ea praesentium porro error"}
+          source={"./Project-05.png"}
+          titleFirstButton="Ver Github"
+          titleSecondButton="Ver en vivo"
+          alternateText="Password Generator Project"
+        />
+
+        <Card
+          title={"Web Conovatec"}
+          description={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio molestias repellat consectetur, eius ut modi minus ea praesentium porro error"}
+          source={"./Project-12.png"}
+          titleFirstButton="Ver Github"
+          titleSecondButton="Ver en vivo"
+          alternateText="Password Generator Project"
+        />
+
+        <Card
+          title={"COREJU Cajamarca"}
+          description={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio molestias repellat consectetur, eius ut modi minus ea praesentium porro error"}
+          source={"./Project-14.png"}
+          titleFirstButton="Ver Github"
+          titleSecondButton="Ver en vivo"
+          alternateText="Password Generator Project"
+        />
+
+        <Card
+          title={"Ecopo"}
+          description={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio molestias repellat consectetur, eius ut modi minus ea praesentium porro error"}
+          source={"./Project-10.png"}
+          titleFirstButton="Ver Github"
+          titleSecondButton="Ver en vivo"
+          alternateText="Password Generator Project"
+        />
+
+        <Card
+          title={"BlogDeCafé"}
+          description={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio molestias repellat consectetur, eius ut modi minus ea praesentium porro error"}
+          source={"./Project-11.png"}
+          titleFirstButton="Ver Github"
+          titleSecondButton="Ver en vivo"
+          alternateText="Password Generator Project"
+        />
+      </div>
+    </div>
+    <a
+      href="#"
+      class="p-3 my-4 rounded bg-black text-white underline tracking-wider font-bold"
+      >Ver más proyectos</a
+    >
+
+    <!-- About me -->
+    <div
+      class="my-5 flex flex-wrap md:grid md:grid-cols-2 md:gap-4"
+      id="aboutme"
+    >
+      <div class="max-h-full max-w-fit">
+        <img
+          src="./about-me.webp"
+          class="filter object-cover grayscale contrast-[1.2] rounded-md h-full"
+          alt="profile"
+        />
+      </div>
+      <div class="flex flex-col">
+        <h3 class="font-bold text-center sm:text-left text-4xl py-6">
+          Sobre mi
+        </h3>
+        <hr class="border-[2px] border-black mb-6 w-full opacity-50 sm:w-12" />
+        <p class="text-center sm:text-left">
+          Desde que era niño, siempre soñé con convertirme en programador y
+          crear mis propios juegos. Me fascina la idea de poder contribuir a la
+          sociedad a través de la creación de cosas hermosas y funcionales.
+          Actualmente, tengo 17 años y estoy muy emocionado por mi camino en el
+          mundo de la programación. Además, soy voluntario en Conovatec, una
+          organización donde puedo poner en práctica mis habilidades y ayudar a
+          los demás. También he trabajado en varios proyectos personales,
+          enfocándome en encontrar soluciones innovadoras y dedicándome a ellos
+          en mi tiempo libre. Estoy comprometido en aprender, crecer y hacer
+          realidad mis sueños en el campo de la programación.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="mt-16 p-8 bg-black text-white flex justify-between">
+    <div class="flex gap-2">
+      <a href="#" class="flex justify-center items-center gap-2">
+        <img src="./github.svg" alt="GitHub Icon" class="w-4" /> Github
+      </a>
+
+      <a href="#" class="flex justify-center items-center gap-2">
+        <img src="./linkedin.svg" alt="GitHub Icon" class="w-4" /> LinkedIn
+      </a>
+    </div>
+
+    <div>
+      <p>Terms and conditions | 2023 - Xeroh</p>
+    </div>
+  </footer>
+</Layout>
