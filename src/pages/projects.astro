@@ -1,9 +1,33 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="Projects">
+  <header
+    class="flex justify-between items-center max-w-5xl w-11/12 mx-auto py-5"
+    id="upToLogo"
+  >
+    <div class="w-32">
+      <a href="/portfolio/"
+        ><img
+          src="./logo-black.webp"
+          alt="Logo Xeroh"
+          class="w-full object-cover"
+        /></a
+      >
+    </div>
+
+    <nav>
+      <ul class="flex gap-2">
+        <li><a href="/portfolio/">Inicio</a></li>
+        <li class="font-bold"><a href="/portfolio/projects">Projects</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+
   <div>
     <Card
       title={"Password Generator"}
@@ -12,6 +36,8 @@ import Card from "../components/Card.astro";
       titleFirstButton="Ver Github"
       titleSecondButton="Ver en vivo"
       alternateText="Password Generator Project"
+      linkGithub=""
+      linkLive=""
     />
 
     <Card
@@ -21,6 +47,8 @@ import Card from "../components/Card.astro";
       titleFirstButton="Ver Github"
       titleSecondButton="Ver en vivo"
       alternateText="Password Generator Project"
+      linkGithub=""
+      linkLive=""
     />
 
     <Card
@@ -30,6 +58,8 @@ import Card from "../components/Card.astro";
       titleFirstButton="Ver Github"
       titleSecondButton="Ver en vivo"
       alternateText="Password Generator Project"
+      linkGithub=""
+      linkLive=""
     />
 
     <Card
@@ -39,6 +69,8 @@ import Card from "../components/Card.astro";
       titleFirstButton="Ver Github"
       titleSecondButton="Ver en vivo"
       alternateText="Password Generator Project"
+      linkGithub=""
+      linkLive=""
     />
 
     <Card
@@ -48,6 +80,8 @@ import Card from "../components/Card.astro";
       titleFirstButton="Ver Github"
       titleSecondButton="Ver en vivo"
       alternateText="Password Generator Project"
+      linkGithub=""
+      linkLive=""
     />
 
     <Card
@@ -57,6 +91,8 @@ import Card from "../components/Card.astro";
       titleFirstButton="Ver Github"
       titleSecondButton="Ver en vivo"
       alternateText="Password Generator Project"
+      linkGithub=""
+      linkLive=""
     />
 
     <Card
@@ -66,6 +102,9 @@ import Card from "../components/Card.astro";
       titleFirstButton="Ver Github"
       titleSecondButton="Ver en vivo"
       alternateText="Password Generator Project"
+      linkGithub=""
+      linkLive=""
     />
   </div>
+  <Footer />
 </Layout>

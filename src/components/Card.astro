@@ -6,6 +6,8 @@ interface Props {
   titleSecondButton: string;
   source: string;
   alternateText: string;
+  linkGithub: string;
+  linkLive: string;
 }
 
 const {
@@ -15,6 +17,8 @@ const {
   titleSecondButton,
   source,
   alternateText,
+  linkGithub,
+  linkLive,
 } = Astro.props;
 ---
 
@@ -28,25 +32,28 @@ const {
 
   <div class="flex flex-wrap gap-2">
     <a
-      href="#_"
+      href={linkGithub}
       class="rounded-md px-3.5 py-2 m-1 overflow-hidden relative group cursor-pointer border-2 font-medium border-black text-black"
+      target="_blank"
     >
       <span
         class="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-black top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"
       ></span>
       <span
         class="relative text-black transition duration-300 group-hover:text-white ease"
-        >{titleSecondButton}</span
+        >{titleFirstButton}</span
       >
     </a>
 
     <a
-      href="#_"
+      href={linkLive}
       class="rounded-md px-3.5 py-2 m-1 overflow-hidden relative group cursor-pointer border-2 font-medium border-black text-black"
+      target="_blank"
     >
       <span
         class="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-black top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"
-      ></span>
+        >{titleFirstButton}</span
+      >
       <span
         class="relative text-black transition duration-300 group-hover:text-white ease"
         >{titleSecondButton}</span

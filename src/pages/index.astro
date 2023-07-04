@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="Xeroh | Portafolio">
@@ -21,7 +22,7 @@ import Card from "../components/Card.astro";
     <nav>
       <ul class="flex gap-2">
         <li class="font-bold"><a href="/portfolio/">Inicio</a></li>
-        <li><a href="#">Projects</a></li>
+        <li><a href="/portfolio/projects">Projects</a></li>
         <li><a href="#">Blog</a></li>
       </ul>
     </nav>
@@ -74,68 +75,80 @@ import Card from "../components/Card.astro";
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
         <Card
           title={"Instrument"}
-          description={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio molestias repellat consectetur, eius ut modi minus ea praesentium porro error"}
+          description={"Es una réplica o clon no perfecto de la página Instrument, tomada como ejemplo para poner en práctica mis habilidades."}
           source={"./Project-02.png"}
           titleFirstButton="Ver Github"
           titleSecondButton="Ver en vivo"
-          alternateText="Instrument Web Clone"
+          alternateText="Instrument Web Clone Image"
+          linkGithub="https://github.com/PieroBryanBL/Web_Instrument-Landing"
+          linkLive="https://pierobryanbl.github.io/Web_Instrument-Landing/"
         />
 
         <Card
           title={"Elegant Portfolio"}
-          description={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio molestias repellat consectetur, eius ut modi minus ea praesentium porro error"}
+          description={"Fue hecho cuando queria un portafolio, sin embargo, decidi recrear varios hasta decidirme quedarme con uno, y es donde estás viendo esto."}
           source={"./Project-05.png"}
           titleFirstButton="Ver Github"
           titleSecondButton="Ver en vivo"
-          alternateText="Password Generator Project"
+          alternateText="Elegant Portfolio Web"
+          linkGithub="https://github.com/PieroBryanBL/Web_Elegant-Portfolio"
+          linkLive="https://landing-elegantport.netlify.app/"
         />
 
         <Card
           title={"Web Conovatec"}
-          description={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio molestias repellat consectetur, eius ut modi minus ea praesentium porro error"}
+          description={"Es un proyecto colaborativo con mis compañeros de la organizacion Conovatec, donde me ofrece la oportunidad de nuevos desafios."}
           source={"./Project-12.png"}
           titleFirstButton="Ver Github"
           titleSecondButton="Ver en vivo"
-          alternateText="Password Generator Project"
+          alternateText="Web Conovatec Image"
+          linkGithub="https://github.com/CONOVATEC/WebConovatec-Wordpress"
+          linkLive="https://conovatec.dsdeirl.com/"
         />
 
         <Card
           title={"COREJU Cajamarca"}
-          description={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio molestias repellat consectetur, eius ut modi minus ea praesentium porro error"}
+          description={"He colaborado en el proyecto de Coreju Cajamarca, que es una pagina del gobierno de consulta, coordinación, concertación, juventud, desarrollo."}
           source={"./Project-14.png"}
           titleFirstButton="Ver Github"
           titleSecondButton="Ver en vivo"
-          alternateText="Password Generator Project"
+          alternateText="COREJU Cajamarca Image"
+          linkGithub="https://github.com/CONOVATEC/coreju-cajamarca"
+          linkLive="https://dev-coreju-cajamarca.pantheonsite.io/"
         />
 
         <Card
           title={"Ecopo"}
-          description={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio molestias repellat consectetur, eius ut modi minus ea praesentium porro error"}
+          description={"Una creación enfocada en la naturaleza y el medio ambiente, sin considerar el SEO. Aprendí de mis errores al darme cuenta de las fallas al finalizar la primera página."}
           source={"./Project-10.png"}
           titleFirstButton="Ver Github"
           titleSecondButton="Ver en vivo"
-          alternateText="Password Generator Project"
+          alternateText="Ecopo Image"
+          linkGithub="https://github.com/PieroBryanBL/Web_Ecopo-React"
+          linkLive="https://app-ecopo.netlify.app/"
         />
 
         <Card
           title={"BlogDeCafé"}
-          description={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio molestias repellat consectetur, eius ut modi minus ea praesentium porro error"}
+          description={"Creé la página en un curso de Udemy, pero con mi experiencia he creado todo este proyecto con solo ver la imagen de referencia sin utilizar guias o instrucciones."}
           source={"./Project-11.png"}
           titleFirstButton="Ver Github"
           titleSecondButton="Ver en vivo"
-          alternateText="Password Generator Project"
+          alternateText="BlogDeCafé Image"
+          linkGithub="https://github.com/PieroBryanBL/Web_BlogDeCafe"
+          linkLive="https://pierobryanbl.github.io/Web_BlogDeCafe/"
         />
       </div>
     </div>
     <a
-      href="#"
+      href="/portfolio/projects"
       class="p-3 my-4 rounded bg-black text-white underline tracking-wider font-bold"
       >Ver más proyectos</a
     >
 
     <!-- About me -->
     <div
-      class="my-5 flex flex-wrap md:grid md:grid-cols-2 md:gap-4"
+      class="mt-5 flex flex-wrap md:grid md:grid-cols-2 md:gap-4"
       id="aboutme"
     >
       <div class="max-h-full max-w-fit">
@@ -150,7 +163,7 @@ import Card from "../components/Card.astro";
           Sobre mi
         </h3>
         <hr class="border-[2px] border-black mb-6 w-full opacity-50 sm:w-12" />
-        <p class="text-center sm:text-left">
+        <p class="text-left">
           Desde que era niño, siempre soñé con convertirme en programador y
           crear mis propios juegos. Me fascina la idea de poder contribuir a la
           sociedad a través de la creación de cosas hermosas y funcionales.
@@ -161,24 +174,59 @@ import Card from "../components/Card.astro";
           enfocándome en encontrar soluciones innovadoras y dedicándome a ellos
           en mi tiempo libre. Estoy comprometido en aprender, crecer y hacer
           realidad mis sueños en el campo de la programación.
+
+          <h4 class="font-bold underline">Stack:</h4>
+          <ul class="flex py-2 flex-wrap gap-2 font-bold">
+            <li
+              class="bg-black text-white px-2 tracking-tighter hover:skew-y-1 transition-all"
+            >
+              HTML
+            </li>
+            <li
+              class="bg-black text-white px-2 tracking-tighter hover:skew-y-1 transition-all"
+            >
+              CSS
+            </li>
+            <li
+              class="bg-black text-white px-2 tracking-tighte hover:skew-y-1 transition-all"
+            >
+              JavaScript
+            </li>
+            <li
+              class="bg-black text-white px-2 tracking-tighter hover:skew-y-1 transition-all"
+            >
+              ReactJS
+            </li>
+            <li
+              class="bg-black text-white px-2 tracking-tighte hover:skew-y-1 transition-all"
+            >
+              AstroJS
+            </li>
+            <li
+              class="bg-black text-white px-2 tracking-tighter hover:skew-y-1 transition-all"
+            >
+              Git
+            </li>
+            <li
+              class="bg-black text-white px-2 tracking-tighterhover:skew-y-1 transition-all"
+            >
+              Tailwind
+            </li>
+            <li
+              class="bg-black text-white px-2 tracking-tighter hover:skew-y-1 transition-all"
+            >
+              WordPress
+            </li>
+            <li
+              class="bg-black text-white px-2 tracking-tighte hover:skew-y-1 transition-all"
+            >
+              Figma
+            </li>
+          </ul>
         </p>
       </div>
     </div>
   </main>
 
-  <footer class="mt-16 p-8 bg-black text-white flex justify-between">
-    <div class="flex gap-2">
-      <a href="#" class="flex justify-center items-center gap-2">
-        <img src="./github.svg" alt="GitHub Icon" class="w-4" /> Github
-      </a>
-
-      <a href="#" class="flex justify-center items-center gap-2">
-        <img src="./linkedin.svg" alt="GitHub Icon" class="w-4" /> LinkedIn
-      </a>
-    </div>
-
-    <div>
-      <p>Terms and conditions | 2023 - Xeroh</p>
-    </div>
-  </footer>
+  <Footer />
 </Layout>

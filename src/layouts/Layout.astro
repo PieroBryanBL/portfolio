@@ -22,8 +22,7 @@ const { title } = Astro.props;
   <body class="relative">
     <slot />
     <!-- Button to scroll up -->
-    <!-- Button to scroll up -->
-    <div class="fixed hidden right-10 bottom-24" id="scrollUpButtonContainer">
+    <div class="fixed hidden right-2 bottom-24" id="scrollUpButtonContainer">
       <a href="#upToLogo" id="scrollUpButtonLink">
         <img
           src="./scrollup.svg"
@@ -34,20 +33,15 @@ const { title } = Astro.props;
     </div>
 
     <script>
-      // Obtén los elementos del contenedor y el enlace del botón de scroll
       const scrollUpButtonContainer = document.getElementById(
         "scrollUpButtonContainer"
       );
       const scrollUpButtonLink = document.getElementById("scrollUpButtonLink");
 
-      // Agrega un evento de desplazamiento (scroll) al objeto global 'window'
       window.addEventListener("scroll", () => {
-        // Verifica si la posición vertical del desplazamiento es mayor a 0
         if (window.pageYOffset > 0) {
-          // Si es mayor a 0, muestra el contenedor del botón
           scrollUpButtonContainer.style.display = "block";
         } else {
-          // Si es 0, oculta el contenedor del botón
           scrollUpButtonContainer.style.display = "none";
         }
       });
