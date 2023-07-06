@@ -12,7 +12,7 @@ import Footer from "../components/Footer.astro";
     <div class="w-32">
       <a href="/portfolio/"
         ><img
-          src="./logo-black.webp"
+          src="../logo-black.webp"
           alt="Logo Xeroh"
           class="w-full object-cover"
         /></a
@@ -21,90 +21,106 @@ import Footer from "../components/Footer.astro";
 
     <nav>
       <ul class="flex gap-2">
-        <li><a href="/portfolio/">Inicio</a></li>
+        <li><a href="/portfolio/">Home</a></li>
         <li class="font-bold"><a href="/portfolio/projects">Projects</a></li>
         <li><a href="#">Blog</a></li>
       </ul>
     </nav>
   </header>
 
-  <div>
-    <Card
-      title={"Password Generator"}
-      description={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio molestias repellat consectetur, eius ut modi minus ea praesentium porro error"}
-      source={"./Project-03.png"}
-      titleFirstButton="Ver Github"
-      titleSecondButton="Ver en vivo"
-      alternateText="Password Generator Project"
-      linkGithub=""
-      linkLive=""
-    />
+  <main>
+    <div>
+      <!-- Encabezado de Projects -->
+      <div class="h-96 bg-blue-500 flex items-center mb-8">
+        <div class="w-8/12 mx-auto">
+          <h1
+            class="ml-4 p-3 font-bold text-white text-5xl italic md:text-7xl md:w-11/12 md:mx-auto md:place-content-center"
+          >
+            Todos mis proyectos en un solo lugar
+          </h1>
+        </div>
+      </div>
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-5xl w-11/12 mx-auto place-content-center"
+      >
+        <Card
+          title={"Password Generator"}
+          description={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio molestias repellat consectetur, eius ut modi minus ea praesentium porro error"}
+          source={"../Project-03.png"}
+          titleFirstButton="Ver Github"
+          titleSecondButton="Ver en vivo"
+          alternateText="Password Generator Project"
+          linkGithub=""
+          linkLive=""
+        />
 
-    <Card
-      title={"To-Do List"}
-      description={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio molestias repellat consectetur, eius ut modi minus ea praesentium porro error"}
-      source={"./Project-04.png"}
-      titleFirstButton="Ver Github"
-      titleSecondButton="Ver en vivo"
-      alternateText="Password Generator Project"
-      linkGithub=""
-      linkLive=""
-    />
+        <Card
+          title={"To-Do List"}
+          description={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio molestias repellat consectetur, eius ut modi minus ea praesentium porro error"}
+          source={"../Project-04.png"}
+          titleFirstButton="Ver Github"
+          titleSecondButton="Ver en vivo"
+          alternateText="Password Generator Project"
+          linkGithub=""
+          linkLive=""
+        />
 
-    <Card
-      title={"Calculator"}
-      description={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio molestias repellat consectetur, eius ut modi minus ea praesentium porro error"}
-      source={"./Project-06.png"}
-      titleFirstButton="Ver Github"
-      titleSecondButton="Ver en vivo"
-      alternateText="Password Generator Project"
-      linkGithub=""
-      linkLive=""
-    />
+        <Card
+          title={"Calculator"}
+          description={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio molestias repellat consectetur, eius ut modi minus ea praesentium porro error"}
+          source={"../Project-06.png"}
+          titleFirstButton="Ver Github"
+          titleSecondButton="Ver en vivo"
+          alternateText="Password Generator Project"
+          linkGithub=""
+          linkLive=""
+        />
 
-    <Card
-      title={"Result Interface"}
-      description={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio molestias repellat consectetur, eius ut modi minus ea praesentium porro error"}
-      source={"./Project-07.png"}
-      titleFirstButton="Ver Github"
-      titleSecondButton="Ver en vivo"
-      alternateText="Password Generator Project"
-      linkGithub=""
-      linkLive=""
-    />
+        <Card
+          title={"Result Interface"}
+          description={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio molestias repellat consectetur, eius ut modi minus ea praesentium porro error"}
+          source={"../Project-07.png"}
+          titleFirstButton="Ver Github"
+          titleSecondButton="Ver en vivo"
+          alternateText="Password Generator Project"
+          linkGithub=""
+          linkLive=""
+        />
 
-    <Card
-      title={"Notifications Interface"}
-      description={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio molestias repellat consectetur, eius ut modi minus ea praesentium porro error"}
-      source={"./Project-08.png"}
-      titleFirstButton="Ver Github"
-      titleSecondButton="Ver en vivo"
-      alternateText="Password Generator Project"
-      linkGithub=""
-      linkLive=""
-    />
+        <Card
+          title={"Notifications Interface"}
+          description={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio molestias repellat consectetur, eius ut modi minus ea praesentium porro error"}
+          source={"../Project-08.png"}
+          titleFirstButton="Ver Github"
+          titleSecondButton="Ver en vivo"
+          alternateText="Password Generator Project"
+          linkGithub=""
+          linkLive=""
+        />
 
-    <Card
-      title={"Blackjack"}
-      description={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio molestias repellat consectetur, eius ut modi minus ea praesentium porro error"}
-      source={"./Project-09.png"}
-      titleFirstButton="Ver Github"
-      titleSecondButton="Ver en vivo"
-      alternateText="Password Generator Project"
-      linkGithub=""
-      linkLive=""
-    />
+        <Card
+          title={"Blackjack"}
+          description={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio molestias repellat consectetur, eius ut modi minus ea praesentium porro error"}
+          source={"../Project-09.png"}
+          titleFirstButton="Ver Github"
+          titleSecondButton="Ver en vivo"
+          alternateText="Password Generator Project"
+          linkGithub=""
+          linkLive=""
+        />
 
-    <Card
-      title={"Santo Pollo"}
-      description={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio molestias repellat consectetur, eius ut modi minus ea praesentium porro error"}
-      source={"./Project-13.png"}
-      titleFirstButton="Ver Github"
-      titleSecondButton="Ver en vivo"
-      alternateText="Password Generator Project"
-      linkGithub=""
-      linkLive=""
-    />
-  </div>
-  <Footer />
+        <Card
+          title={"Santo Pollo"}
+          description={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio molestias repellat consectetur, eius ut modi minus ea praesentium porro error"}
+          source={"../Project-13.png"}
+          titleFirstButton="Ver Github"
+          titleSecondButton="Ver en vivo"
+          alternateText="Password Generator Project"
+          linkGithub=""
+          linkLive=""
+        />
+      </div>
+    </div>
+  </main>
 </Layout>
+<Footer />
