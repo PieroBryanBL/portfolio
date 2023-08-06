@@ -22,25 +22,54 @@ import Footer from "../components/Footer.astro";
     <nav>
       <ul class="flex gap-2">
         <li class="font-bold"><a href="/portfolio/">Home</a></li>
-        <li><a href="/portfolio/projects">Projects</a></li>
+        <li><a href="/portfolio/projects">projects</a></li>
         <li><a href="#">Blog</a></li>
       </ul>
     </nav>
   </header>
 
-  <main class="max-w-5xl w-11/12 mx-auto grid place-content-center">
+  <main class="max-w-5xl w-10/12 mx-auto grid place-content-center">
     <!-- Hero -->
     <div class="flex flex-col gap-7 my-20">
-      <div class="text-center flex flex-col gap-3">
-        <h1 class="font-bold text-4xl">Hola, mi nombre es Piero Bryan</h1>
-        <p class="italic my-1">
-          Soy un desarrollador Front-End al que le encanta la tecnología y los
-          juegos con amigos. Me divierto creando cosas en la web y disfruto
-          pasar tiempo con mis conocidos en sesiones de juego. ¡La tecnología y
-          los videojuegos son mi pasión!
+      <div class="text-center flex flex-col justify-center items-center gap-3">
+        <div class="h-64 w-64 md:h-80 md:w-80 mb-10">
+          <img
+            src="./about-me.webp"
+            class="object-cover rounded-full object-top h-full w-full shadow-xl"
+            alt="profile"
+          />
+        </div>
+        <h1 class="font-bold text-4xl">Hello, my name is Piero Bryan</h1>
+        <p class="my-1 text-lg font-bold text-[#00000082]">
+          Passionate Front-End developer, looking for opportunities
         </p>
       </div>
       <div class="flex gap-2 justify-center">
+        <a
+          href="#contact"
+          class="relative px-5 py-3 overflow-hidden font-medium bg-[#758cff] border-[1px] border-black rounded shadow-inner group"
+        >
+          <span
+            class="absolute top-0 left-0 w-0 h-0 transition-all duration-200 border-t-2 border-gray-600 group-hover:w-full ease"
+          ></span>
+          <span
+            class="absolute bottom-0 right-0 w-0 h-0 transition-all duration-200 border-b-2 border-gray-600 group-hover:w-full ease"
+          ></span>
+          <span
+            class="absolute top-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-gray-600 group-hover:h-full ease"
+          ></span>
+          <span
+            class="absolute bottom-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-gray-600 group-hover:h-full ease"
+          ></span>
+          <span
+            class="absolute inset-0 w-full h-full duration-300 delay-300 bg-gray-900 opacity-0 group-hover:opacity-100"
+          ></span>
+          <span
+            class="relative transition-colors duration-300 delay-200 group-hover:text-white ease"
+            >¡Talk to me!</span
+          >
+        </a>
+
         <a
           href="#aboutme"
           class="relative px-5 py-3 overflow-hidden font-medium text-gray-600 bg-gray-100 border-[1px] border-black rounded shadow-inner group"
@@ -62,12 +91,52 @@ import Footer from "../components/Footer.astro";
           ></span>
           <span
             class="relative transition-colors duration-300 delay-200 group-hover:text-white ease"
-            >Sobre mi</span
+            >About me</span
           >
         </a>
       </div>
     </div>
     <!-- Fin de Hero -->
+
+    <!-- About me -->
+    <div
+      class="mt-5 flex justify-center items-center flex-wrap md:gap-4"
+      id="aboutme"
+    >
+      <div class="flex flex-col">
+        <h3 class="font-bold text-center sm:text-left text-4xl py-6">
+          About me
+        </h3>
+        <hr
+          class="border-[1.5px] border-black mb-6 w-full opacity-50 sm:w-12"
+        />
+        <p class="text-left">
+          I am a Front-End Web Developer and Web Designer, I have studied at
+          SISE and I also keep my discipline learning with what there is on the
+          internet being self-taught, <span class="text-[#758cff] underline"
+            ><a href="">you can check more in my CV</a></span
+          >. I'm a guy who has passion for creating and helping in what I'm good
+          at, I aim to create music, games and contribute in what I can with my
+          skills, being honest, serious and telling the truth in any situation,
+          but never stopping being someone who tries to be nice. I am determined
+          in my path, I will be a developer in the programming field, count me
+          in!
+
+          <h4 class="font-bold underline mt-5">Stack:</h4>
+          <ul class="flex py-2 flex-wrap gap-2 font-bold">
+            <li class="bg-[#758cff] text-white px-2">HTML</li>
+            <li class="bg-black text-white px-2">CSS</li>
+            <li class="bg-[#758cff] text-white px-2">JavaScript</li>
+            <li class="bg-black text-white px-2">ReactJS</li>
+            <li class="bg-[#758cff] text-white px-2">AstroJS</li>
+            <li class="bg-black text-white px-2">Git</li>
+            <li class="bg-[#758cff] text-white px-2">Tailwind</li>
+            <li class="bg-black text-white px-2">WordPress</li>
+            <li class="bg-[#758cff] text-white px-2">Figma</li>
+          </ul>
+        </p>
+      </div>
+    </div>
 
     <!-- Proyectos -->
     <div class="flex flex-col justify-center items-center">
@@ -75,21 +144,22 @@ import Footer from "../components/Footer.astro";
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
         <Card
           title={"Instrument"}
-          description={"Es una réplica o clon no perfecto de la página Instrument, tomada como ejemplo para poner en práctica mis habilidades."}
-          source={"./Project-02.png"}
-          titleFirstButton="Ver Github"
-          titleSecondButton="Ver en vivo"
+          description={"It is a non-perfect replica or clone of the Instrument page, taken as an example to put my skills into practice."}
+          source={"./project-02.webp"}
+          titleFirstButton="See Github"
+          titleSecondButton="See live"
           alternateText="Instrument Web Clone Image"
           linkGithub="https://github.com/PieroBryanBL/Web_Instrument-Landing"
           linkLive="https://pierobryanbl.github.io/Web_Instrument-Landing/"
+          bgColor="bg-[#758cff]"
         />
 
         <Card
           title={"Elegant Portfolio"}
-          description={"Fue hecho cuando queria un portafolio, sin embargo, decidi recrear varios hasta decidirme quedarme con uno, y es donde estás viendo esto."}
-          source={"./Project-05.png"}
-          titleFirstButton="Ver Github"
-          titleSecondButton="Ver en vivo"
+          description={"It was made when I wanted a portfolio, however, I decided to recreate several until I decided to keep one, and that's where you're seeing this."}
+          source={"./project-05.webp"}
+          titleFirstButton="See Github"
+          titleSecondButton="See live"
           alternateText="Elegant Portfolio Web"
           linkGithub="https://github.com/PieroBryanBL/Web_Elegant-Portfolio"
           linkLive="https://landing-elegantport.netlify.app/"
@@ -97,21 +167,22 @@ import Footer from "../components/Footer.astro";
 
         <Card
           title={"Web Conovatec"}
-          description={"Es un proyecto colaborativo con mis compañeros de la organizacion Conovatec, donde me ofrece la oportunidad de nuevos desafios."}
-          source={"./Project-12.png"}
-          titleFirstButton="Ver Github"
-          titleSecondButton="Ver en vivo"
+          description={"It is a collaborative project with my colleagues from the Conovatec organization, where it offers me the opportunity for new challenges."}
+          source={"./project-12.webp"}
+          titleFirstButton="See Github"
+          titleSecondButton="See live"
           alternateText="Web Conovatec Image"
           linkGithub="https://github.com/CONOVATEC/WebConovatec-Wordpress"
           linkLive="https://conovatec.dsdeirl.com/"
+          bgColor="bg-[#758cff]"
         />
 
         <Card
           title={"COREJU Cajamarca"}
-          description={"He colaborado en el proyecto de Coreju Cajamarca, que es una pagina del gobierno de consulta, coordinación, concertación, juventud, desarrollo."}
-          source={"./Project-14.png"}
-          titleFirstButton="Ver Github"
-          titleSecondButton="Ver en vivo"
+          description={"I have collaborated in the Coreju Cajamarca project, which is a government page for consultation, coordination, concertation, youth, development."}
+          source={"./project-14.webp"}
+          titleFirstButton="See Github"
+          titleSecondButton="See live"
           alternateText="COREJU Cajamarca Image"
           linkGithub="https://github.com/CONOVATEC/coreju-cajamarca"
           linkLive="https://dev-coreju-cajamarca.pantheonsite.io/"
@@ -119,21 +190,22 @@ import Footer from "../components/Footer.astro";
 
         <Card
           title={"Ecopo"}
-          description={"Una creación enfocada en la naturaleza y el medio ambiente, sin considerar el SEO. Aprendí de mis errores al darme cuenta de las fallas al finalizar la primera página."}
-          source={"./Project-10.png"}
-          titleFirstButton="Ver Github"
-          titleSecondButton="Ver en vivo"
+          description={"A creation focused on nature and the environment, without considering SEO. I learned from my mistakes by realizing the flaws at the end of the first page."}
+          source={"./project-10.webp"}
+          titleFirstButton="See Github"
+          titleSecondButton="See live"
           alternateText="Ecopo Image"
           linkGithub="https://github.com/PieroBryanBL/Web_Ecopo-React"
           linkLive="https://app-ecopo.netlify.app/"
+          bgColor="bg-[#758cff]"
         />
 
         <Card
           title={"BlogDeCafé"}
-          description={"Creé la página en un curso de Udemy, pero con mi experiencia he creado todo este proyecto con solo ver la imagen de referencia sin utilizar guias o instrucciones."}
-          source={"./Project-11.png"}
-          titleFirstButton="Ver Github"
-          titleSecondButton="Ver en vivo"
+          description={"I created the page in a Udemy course, but with my experience I have created this whole project just by looking at the reference image without using guides or instructions."}
+          source={"./project-11.webp"}
+          titleFirstButton="See Github"
+          titleSecondButton="See live"
           alternateText="BlogDeCafé Image"
           linkGithub="https://github.com/PieroBryanBL/Web_BlogDeCafe"
           linkLive="https://pierobryanbl.github.io/Web_BlogDeCafe/"
@@ -142,90 +214,9 @@ import Footer from "../components/Footer.astro";
     </div>
     <a
       href="/portfolio/projects"
-      class="p-3 my-4 rounded bg-black text-white underline tracking-wider font-bold"
+      class="p-3 my-4 rounded bg-[#00030f] text-white underline tracking-wider font-bold"
       >Ver más proyectos</a
     >
-
-    <!-- About me -->
-    <div
-      class="mt-5 flex flex-wrap md:grid md:grid-cols-2 md:gap-4"
-      id="aboutme"
-    >
-      <div class="max-h-full max-w-fit">
-        <img
-          src="./about-me.webp"
-          class="filter object-cover grayscale contrast-[1.2] rounded-md h-full"
-          alt="profile"
-        />
-      </div>
-      <div class="flex flex-col">
-        <h3 class="font-bold text-center sm:text-left text-4xl py-6">
-          Sobre mi
-        </h3>
-        <hr class="border-[2px] border-black mb-6 w-full opacity-50 sm:w-12" />
-        <p class="text-left">
-          Desde que era niño, siempre soñé con convertirme en programador y
-          crear mis propios juegos. Me fascina la idea de poder contribuir a la
-          sociedad a través de la creación de cosas hermosas y funcionales.
-          Actualmente, tengo 17 años y estoy muy emocionado por mi camino en el
-          mundo de la programación. Además, soy voluntario en Conovatec, una
-          organización donde puedo poner en práctica mis habilidades y ayudar a
-          los demás. También he trabajado en varios proyectos personales,
-          enfocándome en encontrar soluciones innovadoras y dedicándome a ellos
-          en mi tiempo libre. Estoy comprometido en aprender, crecer y hacer
-          realidad mis sueños en el campo de la programación.
-
-          <h4 class="font-bold underline">Stack:</h4>
-          <ul class="flex py-2 flex-wrap gap-2 font-bold">
-            <li
-              class="bg-black text-white px-2 tracking-tighter hover:skew-y-1 transition-all"
-            >
-              HTML
-            </li>
-            <li
-              class="bg-black text-white px-2 tracking-tighter hover:skew-y-1 transition-all"
-            >
-              CSS
-            </li>
-            <li
-              class="bg-black text-white px-2 tracking-tighte hover:skew-y-1 transition-all"
-            >
-              JavaScript
-            </li>
-            <li
-              class="bg-black text-white px-2 tracking-tighter hover:skew-y-1 transition-all"
-            >
-              ReactJS
-            </li>
-            <li
-              class="bg-black text-white px-2 tracking-tighte hover:skew-y-1 transition-all"
-            >
-              AstroJS
-            </li>
-            <li
-              class="bg-black text-white px-2 tracking-tighter hover:skew-y-1 transition-all"
-            >
-              Git
-            </li>
-            <li
-              class="bg-black text-white px-2 tracking-tighterhover:skew-y-1 transition-all"
-            >
-              Tailwind
-            </li>
-            <li
-              class="bg-black text-white px-2 tracking-tighter hover:skew-y-1 transition-all"
-            >
-              WordPress
-            </li>
-            <li
-              class="bg-black text-white px-2 tracking-tighte hover:skew-y-1 transition-all"
-            >
-              Figma
-            </li>
-          </ul>
-        </p>
-      </div>
-    </div>
   </main>
 
   <Footer />

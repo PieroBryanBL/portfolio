@@ -8,6 +8,7 @@ interface Props {
   alternateText: string;
   linkGithub: string;
   linkLive: string;
+  bgColor?: string;
 }
 
 const {
@@ -19,10 +20,15 @@ const {
   alternateText,
   linkGithub,
   linkLive,
+  bgColor,
 } = Astro.props;
 ---
 
-<div class="flex flex-col gap-5 rounded-md bg-white p-5 border">
+<div
+  class={`border-[1px] border-black shadow-inner flex flex-col gap-5 rounded-md  p-5 ${
+    Astro.props.bgColor || "bg-white"
+  }`}
+>
   <!-- Carta -->
   <div class="flex flex-col flex-wrap gap-4">
     <img src={source} alt={alternateText} class="rounded-md shadow-md" />
