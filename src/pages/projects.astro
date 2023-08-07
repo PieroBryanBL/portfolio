@@ -1,7 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
+import CardProject from "../components/CardProjects.astro";
 import Footer from "../components/Footer.astro";
+import CardProjects from "../components/CardProjects.astro";
 ---
 
 <Layout title="Projects">
@@ -12,9 +13,10 @@ import Footer from "../components/Footer.astro";
     <div class="w-32">
       <a href="/portfolio/"
         ><img
-          src="../logo-black.webp"
+          src="./logo-dark.webp"
           alt="Logo Xeroh"
           class="w-full object-cover"
+          id="headerLogo"
         /></a
       >
     </div>
@@ -28,99 +30,52 @@ import Footer from "../components/Footer.astro";
     </nav>
   </header>
 
-  <main>
-    <div>
-      <!-- Encabezado de Projects -->
-      <div class="h-96 bg-blue-500 flex items-center mb-8">
-        <div class="w-8/12 mx-auto">
-          <h1
-            class="ml-4 p-3 font-bold text-white text-5xl italic md:text-7xl md:w-11/12 md:mx-auto md:place-content-center"
-          >
-            Todos mis proyectos en un solo lugar
-          </h1>
-        </div>
-      </div>
-      <div
-        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-5xl w-11/12 mx-auto place-content-center"
-      >
-        <Card
-          title={"Password Generator"}
-          description={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio molestias repellat consectetur, eius ut modi minus ea praesentium porro error"}
-          source={"../Project-03.png"}
-          titleFirstButton="Ver Github"
-          titleSecondButton="Ver en vivo"
-          alternateText="Password Generator Project"
-          linkGithub=""
-          linkLive=""
-        />
+  <main class="min-h-screen">
+    <div class="grid grid-cols-1 lg:grid-cols-3">
+      <CardProjects
+        title="Bookmark Landing"
+        description="Proyecto con Tailwind, práctica, mejora de habilidades."
+        titleFirstButton="See Github"
+        titleSecondButton="See Live"
+        linkGithub="https://github.com/PieroBryanBL/Web_Bookmark-Landing"
+        linkLive=""
+        source="./project-01.webp"
+        alternateText="Bookmark Project"
+      />
 
-        <Card
-          title={"To-Do List"}
-          description={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio molestias repellat consectetur, eius ut modi minus ea praesentium porro error"}
-          source={"../Project-04.png"}
-          titleFirstButton="Ver Github"
-          titleSecondButton="Ver en vivo"
-          alternateText="Password Generator Project"
-          linkGithub=""
-          linkLive=""
-        />
+      <CardProjects
+        title="Basic Calculator"
+        description="Esperanzas, Tailwind, aprendizaje, sin funcionalidades."
+        titleFirstButton="See Github"
+        titleSecondButton="See Live"
+        linkGithub="https://github.com/PieroBryanBL/App_Basic-Calculator"
+        linkLive="https://pierobryanbl.github.io/App_Basic-Calculator/"
+        source="./project-02.webp"
+        alternateText="Basic Calculator"
+      />
 
-        <Card
-          title={"Calculator"}
-          description={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio molestias repellat consectetur, eius ut modi minus ea praesentium porro error"}
-          source={"../Project-06.png"}
-          titleFirstButton="Ver Github"
-          titleSecondButton="Ver en vivo"
-          alternateText="Password Generator Project"
-          linkGithub=""
-          linkLive=""
-        />
+      <CardProjects
+        title="Summary FM"
+        description="Componente Tailwind, no interactivo, pero responsivo."
+        titleFirstButton="See Github"
+        titleSecondButton="See Live"
+        linkGithub="https://github.com/PieroBryanBL/App_Summary-FM"
+        linkLive="https://pierobryanbl.github.io/App_Summary-FM/"
+        source="./project-03.webp"
+        alternateText="Summary Front-End Mentor"
+      />
 
-        <Card
-          title={"Result Interface"}
-          description={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio molestias repellat consectetur, eius ut modi minus ea praesentium porro error"}
-          source={"../Project-07.png"}
-          titleFirstButton="Ver Github"
-          titleSecondButton="Ver en vivo"
-          alternateText="Password Generator Project"
-          linkGithub=""
-          linkLive=""
-        />
-
-        <Card
-          title={"Notifications Interface"}
-          description={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio molestias repellat consectetur, eius ut modi minus ea praesentium porro error"}
-          source={"../Project-08.png"}
-          titleFirstButton="Ver Github"
-          titleSecondButton="Ver en vivo"
-          alternateText="Password Generator Project"
-          linkGithub=""
-          linkLive=""
-        />
-
-        <Card
-          title={"Blackjack"}
-          description={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio molestias repellat consectetur, eius ut modi minus ea praesentium porro error"}
-          source={"../Project-09.png"}
-          titleFirstButton="Ver Github"
-          titleSecondButton="Ver en vivo"
-          alternateText="Password Generator Project"
-          linkGithub=""
-          linkLive=""
-        />
-
-        <Card
-          title={"Santo Pollo"}
-          description={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio molestias repellat consectetur, eius ut modi minus ea praesentium porro error"}
-          source={"../Project-13.png"}
-          titleFirstButton="Ver Github"
-          titleSecondButton="Ver en vivo"
-          alternateText="Password Generator Project"
-          linkGithub=""
-          linkLive=""
-        />
-      </div>
+      <CardProjects
+        title="Notification FM"
+        description="Autodidacta, Tailwind, JavaScript, Front-End Mentor, aprendizaje continuo."
+        titleFirstButton="See Github"
+        titleSecondButton="See Live"
+        linkGithub="https://github.com/PieroBryanBL/App_Notification-FM"
+        linkLive="https://pierobryanbl.github.io/App_Notification-FM/"
+        source="./project-04.webp"
+        alternateText="Notification FM"
+      />
     </div>
   </main>
+  <Footer />
 </Layout>
-<Footer />

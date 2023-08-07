@@ -25,6 +25,39 @@ const { title } = Astro.props;
   </head>
   <body class="relative">
     <slot />
+    <!-- Button to change mode [Light / Dark] -->
+    <div class="fixed right-2 bottom-40">
+      <button class="bg-black shadow-lg rounded-full" id="changeTheme">
+        <img src="./darkmode.svg" class="w-[50px] p-2" id="themeToggleImg" />
+      </button>
+    </div>
+
+    <script>
+      let isActiveDarkMode = false;
+      const themeToggleImg = document.getElementById("themeToggleImg");
+      const headerLogo = document.getElementById("headerLogo");
+
+      function toggleTheme() {
+        if (isActiveDarkMode) {
+          document.body.style.backgroundColor = "#f0ffff";
+          document.body.style.color = "#000";
+          themeToggleImg.src = "./darkmode.svg";
+          isActiveDarkMode = false;
+
+          headerLogo.src = "./logo-dark.webp";
+        } else {
+          document.body.style.backgroundColor = "#121212";
+          document.body.style.color = "#fff";
+          themeToggleImg.src = "./lightmode.svg";
+          isActiveDarkMode = true;
+          headerLogo.src = "./logo-white.webp";
+        }
+      }
+
+      const changeTheme = document.getElementById("changeTheme");
+      changeTheme.addEventListener("click", toggleTheme);
+    </script>
+
     <!-- Button to scroll up -->
     <div class="fixed hidden right-2 bottom-24" id="scrollUpButtonContainer">
       <a href="#upToLogo" id="scrollUpButtonLink">

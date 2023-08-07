@@ -12,9 +12,10 @@ import Footer from "../components/Footer.astro";
     <div class="w-32">
       <a href="/portfolio/"
         ><img
-          src="./logo-black.webp"
+          src="./logo-dark.webp"
           alt="Logo Xeroh"
           class="w-full object-cover"
+          id="headerLogo"
         /></a
       >
     </div>
@@ -22,7 +23,7 @@ import Footer from "../components/Footer.astro";
     <nav>
       <ul class="flex gap-2">
         <li class="font-bold"><a href="/portfolio/">Home</a></li>
-        <li><a href="/portfolio/projects">projects</a></li>
+        <li><a href="/portfolio/projects">Projects</a></li>
         <li><a href="#">Blog</a></li>
       </ul>
     </nav>
@@ -40,7 +41,7 @@ import Footer from "../components/Footer.astro";
           />
         </div>
         <h1 class="font-bold text-4xl">Hello, my name is Piero Bryan</h1>
-        <p class="my-1 text-lg font-bold text-[#00000082]">
+        <p class="my-1 text-lg font-bold">
           Passionate Front-End developer, looking for opportunities
         </p>
       </div>
@@ -140,12 +141,12 @@ import Footer from "../components/Footer.astro";
 
     <!-- Proyectos -->
     <div class="flex flex-col justify-center items-center">
-      <h2 class="font-bold text-3xl my-10">Best Projects</h2>
+      <h2 class="font-bold text-3xl my-10">Best projects</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
         <Card
           title={"Instrument"}
           description={"It is a non-perfect replica or clone of the Instrument page, taken as an example to put my skills into practice."}
-          source={"./project-02.webp"}
+          source={"./best-project-01.webp"}
           titleFirstButton="See Github"
           titleSecondButton="See live"
           alternateText="Instrument Web Clone Image"
@@ -157,7 +158,7 @@ import Footer from "../components/Footer.astro";
         <Card
           title={"Elegant Portfolio"}
           description={"It was made when I wanted a portfolio, however, I decided to recreate several until I decided to keep one, and that's where you're seeing this."}
-          source={"./project-05.webp"}
+          source={"./best-project-02.webp"}
           titleFirstButton="See Github"
           titleSecondButton="See live"
           alternateText="Elegant Portfolio Web"
@@ -167,8 +168,8 @@ import Footer from "../components/Footer.astro";
 
         <Card
           title={"Web Conovatec"}
-          description={"It is a collaborative project with my colleagues from the Conovatec organization, where it offers me the opportunity for new challenges."}
-          source={"./project-12.webp"}
+          description={"It is a collaborative best-project with my colleagues from the Conovatec organization, where it offers me the opportunity for new challenges."}
+          source={"./best-project-03.webp"}
           titleFirstButton="See Github"
           titleSecondButton="See live"
           alternateText="Web Conovatec Image"
@@ -179,8 +180,8 @@ import Footer from "../components/Footer.astro";
 
         <Card
           title={"COREJU Cajamarca"}
-          description={"I have collaborated in the Coreju Cajamarca project, which is a government page for consultation, coordination, concertation, youth, development."}
-          source={"./project-14.webp"}
+          description={"I have collaborated in the Coreju Cajamarca best-project, which is a government page for consultation, coordination, concertation, youth, development."}
+          source={"./best-project-04.webp"}
           titleFirstButton="See Github"
           titleSecondButton="See live"
           alternateText="COREJU Cajamarca Image"
@@ -191,7 +192,7 @@ import Footer from "../components/Footer.astro";
         <Card
           title={"Ecopo"}
           description={"A creation focused on nature and the environment, without considering SEO. I learned from my mistakes by realizing the flaws at the end of the first page."}
-          source={"./project-10.webp"}
+          source={"./best-project-05.webp"}
           titleFirstButton="See Github"
           titleSecondButton="See live"
           alternateText="Ecopo Image"
@@ -202,8 +203,8 @@ import Footer from "../components/Footer.astro";
 
         <Card
           title={"BlogDeCafé"}
-          description={"I created the page in a Udemy course, but with my experience I have created this whole project just by looking at the reference image without using guides or instructions."}
-          source={"./project-11.webp"}
+          description={"I created the page in a Udemy course, but with my experience I have created this whole best-project just by looking at the reference image without using guides or instructions."}
+          source={"./best-project-06.webp"}
           titleFirstButton="See Github"
           titleSecondButton="See live"
           alternateText="BlogDeCafé Image"
@@ -214,7 +215,7 @@ import Footer from "../components/Footer.astro";
     </div>
     <a
       href="/portfolio/projects"
-      class="p-3 my-4 rounded bg-[#00030f] text-white underline tracking-wider font-bold"
+      class="p-6 my-4 rounded bg-[#00030f] text-white underline tracking-wider font-bold"
       >See more projects</a
     >
   </main>
