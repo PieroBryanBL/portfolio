@@ -1,16 +1,17 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
+import CardProjects from "../components/CardProjects.astro";
 import Footer from "../components/Footer.astro";
 ---
 
-<Layout title="Xeroh | Portafolio">
+<Layout title="Bryfolio">
   <header
     class="flex justify-between items-center max-w-5xl w-11/12 mx-auto py-5"
     id="upToLogo"
   >
     <div class="w-32">
-      <a href="/portfolio/"
+      <a href="#" id="logoToHome"
         ><img
           src="./logo-dark.webp"
           alt="Logo Xeroh"
@@ -22,203 +23,308 @@ import Footer from "../components/Footer.astro";
 
     <nav>
       <ul class="flex gap-2">
-        <li class="font-bold"><a href="/portfolio/">Home</a></li>
-        <li><a href="/portfolio/projects">Projects</a></li>
-        <li><a href="#">Blog</a></li>
+        <li><a href="#" id="home">Home</a></li>
+        <li><a href="#" id="projects">Projects</a></li>
+        <li><a href="#" id="blog">Blog</a></li>
       </ul>
     </nav>
   </header>
 
-  <main class="max-w-5xl w-10/12 mx-auto grid place-content-center">
-    <!-- Hero -->
-    <div class="flex flex-col gap-7 my-20">
-      <div class="text-center flex flex-col justify-center items-center gap-3">
-        <div class="h-64 w-64 md:h-80 md:w-80 mb-10">
-          <img
-            src="./about-me.webp"
-            class="object-cover rounded-full object-top h-full w-full shadow-xl"
-            alt="profile"
+  <!-- First Main -->
+  <main class="grid place-content-center">
+    <div id="container-home" class="max-w-5xl w-10/12 mx-auto">
+      <!-- Hero -->
+      <div class="flex flex-col gap-7 my-20">
+        <div
+          class="text-center flex flex-col justify-center items-center gap-3"
+        >
+          <div class="h-64 w-64 md:h-80 md:w-80 mb-10">
+            <img
+              src="./about-me.webp"
+              class="object-cover rounded-full object-top h-full w-full shadow-xl"
+              alt="profile"
+            />
+          </div>
+          <h1 class="font-bold text-4xl">Hello, my name is Piero Bryan</h1>
+          <p class="my-1 text-lg font-bold">
+            Passionate Front-End developer, looking for opportunities
+          </p>
+        </div>
+        <div class="flex gap-2 justify-center">
+          <a
+            href="#contact"
+            class="relative px-5 py-3 overflow-hidden font-medium bg-[#758cff] border-[1px] border-black rounded shadow-inner group"
+          >
+            <span
+              class="absolute top-0 left-0 w-0 h-0 transition-all duration-200 border-t-2 border-gray-600 group-hover:w-full ease"
+            ></span>
+            <span
+              class="absolute bottom-0 right-0 w-0 h-0 transition-all duration-200 border-b-2 border-gray-600 group-hover:w-full ease"
+            ></span>
+            <span
+              class="absolute top-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-gray-600 group-hover:h-full ease"
+            ></span>
+            <span
+              class="absolute bottom-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-gray-600 group-hover:h-full ease"
+            ></span>
+            <span
+              class="absolute inset-0 w-full h-full duration-300 delay-300 bg-gray-900 opacity-0 group-hover:opacity-100"
+            ></span>
+            <span
+              class="relative transition-colors duration-300 delay-200 group-hover:text-white ease"
+              >¡Talk to me!</span
+            >
+          </a>
+
+          <a
+            href="#aboutme"
+            class="relative px-5 py-3 overflow-hidden font-medium text-gray-600 bg-gray-100 border-[1px] border-black rounded shadow-inner group"
+          >
+            <span
+              class="absolute top-0 left-0 w-0 h-0 transition-all duration-200 border-t-2 border-gray-600 group-hover:w-full ease"
+            ></span>
+            <span
+              class="absolute bottom-0 right-0 w-0 h-0 transition-all duration-200 border-b-2 border-gray-600 group-hover:w-full ease"
+            ></span>
+            <span
+              class="absolute top-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-gray-600 group-hover:h-full ease"
+            ></span>
+            <span
+              class="absolute bottom-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-gray-600 group-hover:h-full ease"
+            ></span>
+            <span
+              class="absolute inset-0 w-full h-full duration-300 delay-300 bg-gray-900 opacity-0 group-hover:opacity-100"
+            ></span>
+            <span
+              class="relative transition-colors duration-300 delay-200 group-hover:text-white ease"
+              >About me</span
+            >
+          </a>
+        </div>
+      </div>
+      <!-- Fin de Hero -->
+
+      <!-- About me -->
+      <div
+        class="mt-5 flex justify-center items-center flex-wrap md:gap-4"
+        id="aboutme"
+      >
+        <div class="flex flex-col">
+          <h3 class="font-bold text-center sm:text-left text-4xl py-6">
+            About me
+          </h3>
+          <hr
+            class="border-[1.5px] border-black mb-6 w-full opacity-50 sm:w-12"
+          />
+          <p class="text-left">
+            I am a Front-End Web Developer and Web Designer, I have studied at
+            SISE and I also keep my discipline learning with what there is on
+            the internet being self-taught, <span
+              class="text-[#758cff] underline"
+              ><a href="./cv.pdf" target="_blank" rel="noopener noreferrer"
+                >you can check more in my CV</a
+              ></span
+            >. I'm a guy who has passion for creating and helping in what I'm
+            good at, I aim to create music, games and contribute in what I can
+            with my skills, being honest, serious and telling the truth in any
+            situation, but never stopping being someone who tries to be nice. I
+            am determined in my path, I will be a developer in the programming
+            field, count me in!
+
+            <h4 class="font-bold underline mt-5">Stack:</h4>
+            <ul class="flex py-2 flex-wrap gap-2 font-bold">
+              <li class="bg-[#758cff] text-white px-2">HTML</li>
+              <li class="bg-black text-white px-2">CSS</li>
+              <li class="bg-[#758cff] text-white px-2">JavaScript</li>
+              <li class="bg-black text-white px-2">ReactJS</li>
+              <li class="bg-[#758cff] text-white px-2">AstroJS</li>
+              <li class="bg-black text-white px-2">Git</li>
+              <li class="bg-[#758cff] text-white px-2">Tailwind</li>
+              <li class="bg-black text-white px-2">WordPress</li>
+              <li class="bg-[#758cff] text-white px-2">Figma</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+
+      <!-- Proyectos -->
+      <div class="flex flex-col justify-center items-center">
+        <h2 class="font-bold text-3xl my-10">Best projects</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <Card
+            title={"Instrument"}
+            description={"It is a non-perfect replica or clone of the Instrument page, taken as an example to put my skills into practice."}
+            source={"./best-project-01.webp"}
+            titleFirstButton="See Github"
+            titleSecondButton="See live"
+            alternateText="Instrument Web Clone Image"
+            linkGithub="https://github.com/PieroBryanBL/Web_Instrument-Landing"
+            linkLive="https://pierobryanbl.github.io/Web_Instrument-Landing/"
+            bgColor="bg-[#758cff]"
+          />
+
+          <Card
+            title={"Elegant Portfolio"}
+            description={"It was made when I wanted a portfolio, however, I decided to recreate several until I decided to keep one, and that's where you're seeing this."}
+            source={"./best-project-02.webp"}
+            titleFirstButton="See Github"
+            titleSecondButton="See live"
+            alternateText="Elegant Portfolio Web"
+            linkGithub="https://github.com/PieroBryanBL/Web_Elegant-Portfolio"
+            linkLive="https://landing-elegantport.netlify.app/"
+          />
+
+          <Card
+            title={"Web Conovatec"}
+            description={"It is a collaborative best-project with my colleagues from the Conovatec organization, where it offers me the opportunity for new challenges."}
+            source={"./best-project-03.webp"}
+            titleFirstButton="See Github"
+            titleSecondButton="See live"
+            alternateText="Web Conovatec Image"
+            linkGithub="https://github.com/CONOVATEC/WebConovatec-Wordpress"
+            linkLive="https://conovatec.dsdeirl.com/"
+            bgColor="bg-[#758cff]"
+          />
+
+          <Card
+            title={"COREJU Cajamarca"}
+            description={"I have collaborated in the Coreju Cajamarca best-project, which is a government page for consultation, coordination, concertation, youth, development."}
+            source={"./best-project-04.webp"}
+            titleFirstButton="See Github"
+            titleSecondButton="See live"
+            alternateText="COREJU Cajamarca Image"
+            linkGithub="https://github.com/CONOVATEC/coreju-cajamarca"
+            linkLive="https://dev-coreju-cajamarca.pantheonsite.io/"
+          />
+
+          <Card
+            title={"Ecopo"}
+            description={"A creation focused on nature and the environment, without considering SEO. I learned from my mistakes by realizing the flaws at the end of the first page."}
+            source={"./best-project-05.webp"}
+            titleFirstButton="See Github"
+            titleSecondButton="See live"
+            alternateText="Ecopo Image"
+            linkGithub="https://github.com/PieroBryanBL/Web_Ecopo-React"
+            linkLive="https://app-ecopo.netlify.app/"
+            bgColor="bg-[#758cff]"
+          />
+
+          <Card
+            title={"BlogDeCafé"}
+            description={"I created the page in a Udemy course, but with my experience I have created this whole best-project just by looking at the reference image without using guides or instructions."}
+            source={"./best-project-06.webp"}
+            titleFirstButton="See Github"
+            titleSecondButton="See live"
+            alternateText="BlogDeCafé Image"
+            linkGithub="https://github.com/PieroBryanBL/Web_BlogDeCafe"
+            linkLive="https://pierobryanbl.github.io/Web_BlogDeCafe/"
           />
         </div>
-        <h1 class="font-bold text-4xl">Hello, my name is Piero Bryan</h1>
-        <p class="my-1 text-lg font-bold">
-          Passionate Front-End developer, looking for opportunities
-        </p>
       </div>
-      <div class="flex gap-2 justify-center">
-        <a
-          href="#contact"
-          class="relative px-5 py-3 overflow-hidden font-medium bg-[#758cff] border-[1px] border-black rounded shadow-inner group"
-        >
-          <span
-            class="absolute top-0 left-0 w-0 h-0 transition-all duration-200 border-t-2 border-gray-600 group-hover:w-full ease"
-          ></span>
-          <span
-            class="absolute bottom-0 right-0 w-0 h-0 transition-all duration-200 border-b-2 border-gray-600 group-hover:w-full ease"
-          ></span>
-          <span
-            class="absolute top-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-gray-600 group-hover:h-full ease"
-          ></span>
-          <span
-            class="absolute bottom-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-gray-600 group-hover:h-full ease"
-          ></span>
-          <span
-            class="absolute inset-0 w-full h-full duration-300 delay-300 bg-gray-900 opacity-0 group-hover:opacity-100"
-          ></span>
-          <span
-            class="relative transition-colors duration-300 delay-200 group-hover:text-white ease"
-            >¡Talk to me!</span
-          >
-        </a>
-
-        <a
-          href="#aboutme"
-          class="relative px-5 py-3 overflow-hidden font-medium text-gray-600 bg-gray-100 border-[1px] border-black rounded shadow-inner group"
-        >
-          <span
-            class="absolute top-0 left-0 w-0 h-0 transition-all duration-200 border-t-2 border-gray-600 group-hover:w-full ease"
-          ></span>
-          <span
-            class="absolute bottom-0 right-0 w-0 h-0 transition-all duration-200 border-b-2 border-gray-600 group-hover:w-full ease"
-          ></span>
-          <span
-            class="absolute top-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-gray-600 group-hover:h-full ease"
-          ></span>
-          <span
-            class="absolute bottom-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-gray-600 group-hover:h-full ease"
-          ></span>
-          <span
-            class="absolute inset-0 w-full h-full duration-300 delay-300 bg-gray-900 opacity-0 group-hover:opacity-100"
-          ></span>
-          <span
-            class="relative transition-colors duration-300 delay-200 group-hover:text-white ease"
-            >About me</span
-          >
-        </a>
-      </div>
-    </div>
-    <!-- Fin de Hero -->
-
-    <!-- About me -->
-    <div
-      class="mt-5 flex justify-center items-center flex-wrap md:gap-4"
-      id="aboutme"
-    >
-      <div class="flex flex-col">
-        <h3 class="font-bold text-center sm:text-left text-4xl py-6">
-          About me
-        </h3>
-        <hr
-          class="border-[1.5px] border-black mb-6 w-full opacity-50 sm:w-12"
-        />
-        <p class="text-left">
-          I am a Front-End Web Developer and Web Designer, I have studied at
-          SISE and I also keep my discipline learning with what there is on the
-          internet being self-taught, <span class="text-[#758cff] underline"
-            ><a href="">you can check more in my CV</a></span
-          >. I'm a guy who has passion for creating and helping in what I'm good
-          at, I aim to create music, games and contribute in what I can with my
-          skills, being honest, serious and telling the truth in any situation,
-          but never stopping being someone who tries to be nice. I am determined
-          in my path, I will be a developer in the programming field, count me
-          in!
-
-          <h4 class="font-bold underline mt-5">Stack:</h4>
-          <ul class="flex py-2 flex-wrap gap-2 font-bold">
-            <li class="bg-[#758cff] text-white px-2">HTML</li>
-            <li class="bg-black text-white px-2">CSS</li>
-            <li class="bg-[#758cff] text-white px-2">JavaScript</li>
-            <li class="bg-black text-white px-2">ReactJS</li>
-            <li class="bg-[#758cff] text-white px-2">AstroJS</li>
-            <li class="bg-black text-white px-2">Git</li>
-            <li class="bg-[#758cff] text-white px-2">Tailwind</li>
-            <li class="bg-black text-white px-2">WordPress</li>
-            <li class="bg-[#758cff] text-white px-2">Figma</li>
-          </ul>
-        </p>
-      </div>
+      <button
+        class="p-6 w-full my-4 rounded bg-[#00030f] text-white underline tracking-wider font-bold"
+        id="seeMoreProjects">See more projects</button
+      >
     </div>
 
-    <!-- Proyectos -->
-    <div class="flex flex-col justify-center items-center">
-      <h2 class="font-bold text-3xl my-10">Best projects</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-        <Card
-          title={"Instrument"}
-          description={"It is a non-perfect replica or clone of the Instrument page, taken as an example to put my skills into practice."}
-          source={"./best-project-01.webp"}
+    <!--
+    
+    
+    
+    
+    
+    -->
+
+    <!-- Second Main -->
+    <div class="w-full min-h-screen" id="container-projects">
+      <div class="grid grid-cols-1 lg:grid-cols-3">
+        <CardProjects
+          title="Bookmark Landing"
+          description="Proyecto con Tailwind, práctica, mejora de habilidades."
           titleFirstButton="See Github"
-          titleSecondButton="See live"
-          alternateText="Instrument Web Clone Image"
-          linkGithub="https://github.com/PieroBryanBL/Web_Instrument-Landing"
-          linkLive="https://pierobryanbl.github.io/Web_Instrument-Landing/"
-          bgColor="bg-[#758cff]"
+          titleSecondButton="See Live"
+          linkGithub="https://github.com/PieroBryanBL/Web_Bookmark-Landing"
+          linkLive="https://pierobryanbl.github.io/Web_Bookmark-Landing/"
+          source="./project-01.webp"
+          alternateText="Bookmark Project"
         />
 
-        <Card
-          title={"Elegant Portfolio"}
-          description={"It was made when I wanted a portfolio, however, I decided to recreate several until I decided to keep one, and that's where you're seeing this."}
-          source={"./best-project-02.webp"}
+        <CardProjects
+          title="Basic Calculator"
+          description="Esperanzas, Tailwind, aprendizaje, sin funcionalidades."
           titleFirstButton="See Github"
-          titleSecondButton="See live"
-          alternateText="Elegant Portfolio Web"
-          linkGithub="https://github.com/PieroBryanBL/Web_Elegant-Portfolio"
-          linkLive="https://landing-elegantport.netlify.app/"
+          titleSecondButton="See Live"
+          linkGithub="https://github.com/PieroBryanBL/App_Basic-Calculator"
+          linkLive="https://pierobryanbl.github.io/App_Basic-Calculator/"
+          source="./project-02.webp"
+          alternateText="Basic Calculator"
         />
 
-        <Card
-          title={"Web Conovatec"}
-          description={"It is a collaborative best-project with my colleagues from the Conovatec organization, where it offers me the opportunity for new challenges."}
-          source={"./best-project-03.webp"}
+        <CardProjects
+          title="Summary FM"
+          description="Componente Tailwind, no interactivo, pero responsivo."
           titleFirstButton="See Github"
-          titleSecondButton="See live"
-          alternateText="Web Conovatec Image"
-          linkGithub="https://github.com/CONOVATEC/WebConovatec-Wordpress"
-          linkLive="https://conovatec.dsdeirl.com/"
-          bgColor="bg-[#758cff]"
+          titleSecondButton="See Live"
+          linkGithub="https://github.com/PieroBryanBL/App_Summary-FM"
+          linkLive="https://pierobryanbl.github.io/App_Summary-FM/"
+          source="./project-03.webp"
+          alternateText="Summary Front-End Mentor"
         />
 
-        <Card
-          title={"COREJU Cajamarca"}
-          description={"I have collaborated in the Coreju Cajamarca best-project, which is a government page for consultation, coordination, concertation, youth, development."}
-          source={"./best-project-04.webp"}
+        <CardProjects
+          title="Notification FM"
+          description="Autodidacta, Tailwind, JavaScript, Front-End Mentor, aprendizaje continuo."
           titleFirstButton="See Github"
-          titleSecondButton="See live"
-          alternateText="COREJU Cajamarca Image"
-          linkGithub="https://github.com/CONOVATEC/coreju-cajamarca"
-          linkLive="https://dev-coreju-cajamarca.pantheonsite.io/"
-        />
-
-        <Card
-          title={"Ecopo"}
-          description={"A creation focused on nature and the environment, without considering SEO. I learned from my mistakes by realizing the flaws at the end of the first page."}
-          source={"./best-project-05.webp"}
-          titleFirstButton="See Github"
-          titleSecondButton="See live"
-          alternateText="Ecopo Image"
-          linkGithub="https://github.com/PieroBryanBL/Web_Ecopo-React"
-          linkLive="https://app-ecopo.netlify.app/"
-          bgColor="bg-[#758cff]"
-        />
-
-        <Card
-          title={"BlogDeCafé"}
-          description={"I created the page in a Udemy course, but with my experience I have created this whole best-project just by looking at the reference image without using guides or instructions."}
-          source={"./best-project-06.webp"}
-          titleFirstButton="See Github"
-          titleSecondButton="See live"
-          alternateText="BlogDeCafé Image"
-          linkGithub="https://github.com/PieroBryanBL/Web_BlogDeCafe"
-          linkLive="https://pierobryanbl.github.io/Web_BlogDeCafe/"
+          titleSecondButton="See Live"
+          linkGithub="https://github.com/PieroBryanBL/App_Notification-FM"
+          linkLive="https://pierobryanbl.github.io/App_Notification-FM/"
+          source="./project-04.webp"
+          alternateText="Notification FM"
         />
       </div>
+      <div class="font-bold py-5 text-center opacity-30">
+        ¡I hope you like my works!
+      </div>
     </div>
-    <a
-      href="/portfolio/projects"
-      class="p-6 my-4 rounded bg-[#00030f] text-white underline tracking-wider font-bold"
-      >See more projects</a
-    >
   </main>
+
+  <script>
+    const myHome = document.getElementById("home");
+    const containerHome = document.getElementById("container-home");
+    const myProjects = document.getElementById("projects");
+    const containerProjects = document.getElementById("container-projects");
+    const seeMoreProjects = document.getElementById("seeMoreProjects");
+    const logoToHome = document.getElementById("logoToHome");
+
+    myHome.style.fontWeight = "bold";
+    containerProjects.style.display = "none";
+
+    logoToHome.addEventListener("click", () => {
+      containerProjects.style.display = "none";
+      containerHome.style.display = "block";
+      myProjects.style.fontWeight = "normal";
+      myHome.style.fontWeight = "bold";
+    });
+
+    seeMoreProjects.addEventListener("click", () => {
+      containerHome.style.display = "none";
+      containerProjects.style.display = "block";
+    });
+
+    myProjects.addEventListener("click", () => {
+      containerHome.style.display = "none";
+      containerProjects.style.display = "block";
+      myProjects.style.fontWeight = "bold";
+      myHome.style.fontWeight = "normal";
+    });
+
+    myHome.addEventListener("click", () => {
+      containerProjects.style.display = "none";
+      containerHome.style.display = "block";
+      myProjects.style.fontWeight = "normal";
+      myHome.style.fontWeight = "bold";
+    });
+  </script>
 
   <Footer />
 </Layout>
