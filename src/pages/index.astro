@@ -25,7 +25,6 @@ import Footer from "../components/Footer.astro";
       <ul class="flex gap-2">
         <li><a href="#" id="home">Home</a></li>
         <li><a href="#" id="projects">Projects</a></li>
-        <li><a href="#" id="blog">Blog</a></li>
       </ul>
     </nav>
   </header>
@@ -52,53 +51,23 @@ import Footer from "../components/Footer.astro";
         </div>
         <div class="flex gap-2 justify-center">
           <a
-            href="#contact"
-            class="relative px-5 py-3 overflow-hidden font-medium bg-[#758cff] border-[1px] border-black rounded shadow-inner group"
+            href="mailto:pierobryanst1@gmail.com"
+            class="relative inline-flex items-center justify-start px-6 py-3 overflow-hidden font-medium transition-all bg-white rounded-md hover:bg-white group shadow"
           >
             <span
-              class="absolute top-0 left-0 w-0 h-0 transition-all duration-200 border-t-2 border-gray-600 group-hover:w-full ease"
+              class="w-48 h-48 rounded rotate-[-40deg] bg-[#2c48ff] absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"
             ></span>
             <span
-              class="absolute bottom-0 right-0 w-0 h-0 transition-all duration-200 border-b-2 border-gray-600 group-hover:w-full ease"
-            ></span>
-            <span
-              class="absolute top-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-gray-600 group-hover:h-full ease"
-            ></span>
-            <span
-              class="absolute bottom-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-gray-600 group-hover:h-full ease"
-            ></span>
-            <span
-              class="absolute inset-0 w-full h-full duration-300 delay-300 bg-gray-900 opacity-0 group-hover:opacity-100"
-            ></span>
-            <span
-              class="relative transition-colors duration-300 delay-200 group-hover:text-white ease"
-              >¡Talk to me!</span
+              class="relative w-full text-left text-black transition-colors duration-300 ease-in-out group-hover:text-white"
+              >Talk to me!</span
             >
           </a>
 
           <a
             href="#aboutme"
-            class="relative px-5 py-3 overflow-hidden font-medium text-gray-600 bg-gray-100 border-[1px] border-black rounded shadow-inner group"
+            class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 bg-gray-900 rounded-md hover:bg-gray-800 focus:shadow-outline focus:outline-none shadow"
           >
-            <span
-              class="absolute top-0 left-0 w-0 h-0 transition-all duration-200 border-t-2 border-gray-600 group-hover:w-full ease"
-            ></span>
-            <span
-              class="absolute bottom-0 right-0 w-0 h-0 transition-all duration-200 border-b-2 border-gray-600 group-hover:w-full ease"
-            ></span>
-            <span
-              class="absolute top-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-gray-600 group-hover:h-full ease"
-            ></span>
-            <span
-              class="absolute bottom-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-gray-600 group-hover:h-full ease"
-            ></span>
-            <span
-              class="absolute inset-0 w-full h-full duration-300 delay-300 bg-gray-900 opacity-0 group-hover:opacity-100"
-            ></span>
-            <span
-              class="relative transition-colors duration-300 delay-200 group-hover:text-white ease"
-              >About me</span
-            >
+            About me
           </a>
         </div>
       </div>
@@ -240,7 +209,7 @@ import Footer from "../components/Footer.astro";
       <div class="grid grid-cols-1 lg:grid-cols-3">
         <CardProjects
           title="Bookmark Landing"
-          description="Proyecto con Tailwind, práctica, mejora de habilidades."
+          description="Made with the intention of learning Tailwind."
           titleFirstButton="See Github"
           titleSecondButton="See Live"
           linkGithub="https://github.com/PieroBryanBL/Web_Bookmark-Landing"
@@ -251,7 +220,7 @@ import Footer from "../components/Footer.astro";
 
         <CardProjects
           title="Basic Calculator"
-          description="Esperanzas, Tailwind, aprendizaje, sin funcionalidades."
+          description="A responsive and improvable, non-interactive calculator skeleton"
           titleFirstButton="See Github"
           titleSecondButton="See Live"
           linkGithub="https://github.com/PieroBryanBL/App_Basic-Calculator"
@@ -262,7 +231,7 @@ import Footer from "../components/Footer.astro";
 
         <CardProjects
           title="Summary FM"
-          description="Componente Tailwind, no interactivo, pero responsivo."
+          description="Tailwind component, non-interactive, but responsive."
           titleFirstButton="See Github"
           titleSecondButton="See Live"
           linkGithub="https://github.com/PieroBryanBL/App_Summary-FM"
@@ -273,7 +242,7 @@ import Footer from "../components/Footer.astro";
 
         <CardProjects
           title="Notification FM"
-          description="Autodidacta, Tailwind, JavaScript, Front-End Mentor, aprendizaje continuo."
+          description="Made with the idea of Front End Mentor"
           titleFirstButton="See Github"
           titleSecondButton="See Live"
           linkGithub="https://github.com/PieroBryanBL/App_Notification-FM"
@@ -282,7 +251,7 @@ import Footer from "../components/Footer.astro";
           alternateText="Notification FM"
         />
       </div>
-      <div class="font-bold py-5 text-center opacity-30">
+      <div class="font-bold py-5 text-center opacity-80">
         ¡I hope you like my works!
       </div>
     </div>
